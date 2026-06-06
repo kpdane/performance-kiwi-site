@@ -3,213 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>performance.kiwi — Coming Soon</title>
-  <meta name="description" content="Human performance, applied data, and technology. Coming soon from New Zealand." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>performance.kiwi</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink: #1a1a18;
-      --ink-2: #4a4a45;
-      --ink-3: #8a8a82;
-      --paper: #f5f3ee;
-      --accent: #2d6a4f;
-      --accent-light: #d8ede3;
-      --line: rgba(26,26,24,0.12);
-    }
-
-    html, body {
-      height: 100%;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      -webkit-font-smoothing: antialiased;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d0d;
+      color: #f0f0f0;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      padding: 2.5rem clamp(1.5rem, 6vw, 5rem);
+      justify-content: space-between;
     }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 0.5px solid var(--line);
-      padding-bottom: 1.5rem;
-      margin-bottom: auto;
+      padding: 2rem 2.5rem;
     }
 
-    .wordmark {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      letter-spacing: -0.01em;
-      color: var(--ink);
+    .logo {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #f0f0f0;
     }
 
-    .wordmark span {
-      color: var(--accent);
-    }
+    .logo span { color: #6aaa2a; }
 
-    .tag {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-3);
+    .green { color: #6aaa2a; }
+
+    .brand-logo {
+      width: clamp(120px, 20vw, 180px);
+      height: auto;
+      opacity: 0.92;
     }
 
     main {
       flex: 1;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-      padding: 5vh 0 4vh;
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      gap: 1.25rem;
     }
 
     h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.8rem, 7vw, 5rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin-bottom: 2rem;
-    }
-
-    h1 em {
+      font-size: clamp(2rem, 5.5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
       font-style: italic;
-      color: var(--accent);
     }
 
-    .body-text {
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
-      line-height: 1.7;
-      color: var(--ink-2);
-      max-width: 540px;
-      margin-bottom: 3rem;
+    .sub {
+      font-size: 0.95rem;
+      color: #999;
+      max-width: 460px;
+      line-height: 1.65;
     }
 
     .pillars {
       display: flex;
+      gap: 0.5rem;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 3.5rem;
+      justify-content: center;
     }
 
     .pillar {
-      font-size: 0.78rem;
+      font-size: 0.68rem;
       font-weight: 500;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 0.45rem 1rem;
-      border-radius: 100px;
-      background: var(--accent-light);
-      color: var(--accent);
+      border: 1px solid #222;
+      border-radius: 999px;
+      padding: 0.28rem 0.8rem;
+      color: #666;
     }
 
     .notify {
       display: flex;
-      align-items: center;
-      gap: 0;
-      max-width: 420px;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 0.25rem;
     }
 
     .notify input {
       flex: 1;
-      font-family: 'DM Sans', sans-serif;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      color: #f0f0f0;
       font-size: 0.9rem;
-      font-weight: 300;
-      padding: 0.75rem 1.1rem;
-      border: 0.5px solid var(--ink);
-      border-right: none;
-      border-radius: 4px 0 0 4px;
-      background: transparent;
-      color: var(--ink);
       outline: none;
+      transition: border-color 0.2s;
     }
 
-    .notify input::placeholder { color: var(--ink-3); }
-    .notify input:focus { border-color: var(--accent); }
+    .notify input:focus { border-color: #6aaa2a; }
 
     .notify button {
-      font-family: 'DM Sans', sans-serif;
+      background: #6aaa2a;
+      color: #0d0d0d;
+      border: none;
+      border-radius: 8px;
+      padding: 0.7rem 1.1rem;
       font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.75rem 1.3rem;
-      background: var(--ink);
-      color: var(--paper);
-      border: 0.5px solid var(--ink);
-      border-radius: 0 4px 4px 0;
+      font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
-      transition: background 0.15s;
+      transition: background 0.2s, opacity 0.2s;
     }
 
-    .notify button:hover { background: var(--accent); border-color: var(--accent); }
+    .notify button:hover { background: #578f22; }
+    .notify button:disabled { opacity: 0.55; cursor: not-allowed; }
 
     .note {
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-      color: var(--ink-3);
+      font-size: 0.78rem;
+      color: #555;
+      min-height: 1.2em;
     }
 
     footer {
-      border-top: 0.5px solid var(--line);
-      padding-top: 1.5rem;
+      padding: 1.25rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    footer p {
-      font-size: 0.78rem;
-      color: var(--ink-3);
+      border-top: 1px solid #1a1a1a;
+      font-size: 0.75rem;
+      color: #444;
     }
 
     .nz-flag {
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.78rem;
-      color: var(--ink-3);
-    }
-
-    @media (max-width: 480px) {
-      .notify { flex-direction: column; align-items: stretch; }
-      .notify input { border-right: 0.5px solid var(--ink); border-bottom: none; border-radius: 4px 4px 0 0; }
-      .notify button { border-radius: 0 0 4px 4px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="wordmark">performance<span>.kiwi</span></div>
-    <div class="tag">New Zealand</div>
+    <div class="logo">performance<span>.kiwi</span></div>
   </header>
 
   <main>
-    <p class="eyebrow">Something is coming</p>
-    <h1>Where human<br><em>performance</em><br>meets applied data.</h1>
-    <p class="body-text">
-      A New Zealand venture at the intersection of human performance, technology, and data. Built for executives, athletes, and performers who want to maximise healthspan and productive capacity.
+    <img src="E81BD0FA-1D23-44BF-AD35-2121E989A757.png" alt="performance.kiwi" class="brand-logo" />
+    <h1>Where human <span class="green">performance</span> meets applied data.</h1>
+    <p class="sub">
+      performance.kiwi is at the intersection of human performance, applied data, and technology.
+      Built for executives, athletes, and performers who want to maximise healthspan and productive capacity.
     </p>
     <div class="pillars">
       <span class="pillar">Human Performance</span>
@@ -218,7 +163,7 @@
     </div>
     <div class="notify">
       <input type="email" placeholder="your@email.com" id="email" />
-      <button onclick="handleNotify()">Notify me</button>
+      <button id="notify-btn" onclick="handleNotify()">More Info</button>
     </div>
     <p class="note" id="note">Drop us your email for more information.</p>
   </main>
@@ -228,12 +173,10 @@
     <div class="nz-flag">
       <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="20" height="13" fill="#00247D"/>
-        <path d="M0 0L10 6.5L0 13" fill="none"/>
         <line x1="0" y1="0" x2="10" y2="6.5" stroke="white" stroke-width="1.5"/>
         <line x1="0" y1="13" x2="10" y2="6.5" stroke="white" stroke-width="1.5"/>
         <line x1="0" y1="0" x2="10" y2="6.5" stroke="#CC142B" stroke-width="0.8"/>
         <line x1="0" y1="13" x2="10" y2="6.5" stroke="#CC142B" stroke-width="0.8"/>
-        <!-- Southern Cross (simplified) -->
         <circle cx="14" cy="2.5" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
         <circle cx="18" cy="4" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
         <circle cx="16.5" cy="7" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
@@ -244,18 +187,49 @@
   </footer>
 
   <script>
-    function handleNotify() {
-      const email = document.getElementById('email').value.trim();
+    async function handleNotify() {
+      const emailInput = document.getElementById('email');
       const note = document.getElementById('note');
+      const btn = document.getElementById('notify-btn');
+      const email = emailInput.value.trim();
+
       if (!email || !email.includes('@')) {
         note.textContent = 'Please enter a valid email address.';
         note.style.color = '#c0392b';
         return;
       }
-      note.textContent = "You're on the list. We'll be in touch.";
-      note.style.color = '#2d6a4f';
-      document.getElementById('email').value = '';
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      note.textContent = '';
+      note.style.color = '#555';
+
+      try {
+        const response = await fetch('https://formspree.io/f/xwvjvarg', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+
+        if (response.ok) {
+          note.textContent = "You're on the list. We'll be in touch.";
+          note.style.color = '#6aaa2a';
+          emailInput.value = '';
+          btn.textContent = 'Done ✓';
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        note.textContent = 'Something went wrong — please try again.';
+        note.style.color = '#c0392b';
+        btn.disabled = false;
+        btn.textContent = 'Notify me';
+      }
     }
+
+    document.getElementById('email').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleNotify();
+    });
   </script>
 
 </body>
