@@ -171,16 +171,47 @@
   <footer>
     <p>© 2026 performance.kiwi</p>
     <div class="nz-flag">
-      <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="20" height="13" fill="#00247D"/>
-        <line x1="0" y1="0" x2="10" y2="6.5" stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="13" x2="10" y2="6.5" stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="0" x2="10" y2="6.5" stroke="#CC142B" stroke-width="0.8"/>
-        <line x1="0" y1="13" x2="10" y2="6.5" stroke="#CC142B" stroke-width="0.8"/>
-        <circle cx="14" cy="2.5" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
-        <circle cx="18" cy="4" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
-        <circle cx="16.5" cy="7" r="0.9" fill="#CC142B" stroke="white" stroke-width="0.4"/>
-        <circle cx="13.5" cy="6" r="0.7" fill="#CC142B" stroke="white" stroke-width="0.3"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="34" height="17">
+        <!-- Blue background -->
+        <rect width="1200" height="600" fill="#00247D"/>
+
+        <!-- Union Jack in canton (top-left 600x300) -->
+        <!-- White diagonals -->
+        <polygon points="0,0 75,0 300,125 300,0 225,0 0,125" fill="white"/>
+        <polygon points="0,300 75,300 300,175 300,300 225,300 0,175" fill="white"/>
+        <!-- Red diagonals -->
+        <polygon points="0,0 50,0 300,141.5 300,158.5 250,300 0,300" fill="none"/>
+        <line x1="0" y1="0" x2="300" y2="300" stroke="#CC142B" stroke-width="50"/>
+        <line x1="300" y1="0" x2="0" y2="300" stroke="white" stroke-width="84"/>
+        <line x1="300" y1="0" x2="0" y2="300" stroke="#CC142B" stroke-width="50"/>
+        <!-- White cross -->
+        <rect x="125" y="0" width="50" height="300" fill="white"/>
+        <rect x="0" y="125" width="300" height="50" fill="white"/>
+        <!-- Red cross -->
+        <rect x="137" y="0" width="26" height="300" fill="#CC142B"/>
+        <rect x="0" y="137" width="300" height="26" fill="#CC142B"/>
+
+        <!-- Southern Cross stars (4 red stars with white border) -->
+        <!-- Alpha Crucis (bottom, largest) -->
+        <g transform="translate(1067,465)">
+          <polygon points="0,-45 10,-18 38,-18 16,7 25,35 0,20 -25,35 -16,7 -38,-18 -10,-18" fill="white"/>
+          <polygon points="0,-36 8,-14 30,-14 13,5 20,28 0,16 -20,28 -13,5 -30,-14 -8,-14" fill="#CC142B"/>
+        </g>
+        <!-- Beta Crucis (left) -->
+        <g transform="translate(887,231)">
+          <polygon points="0,-40 9,-16 34,-16 14,6 22,31 0,18 -22,31 -14,6 -34,-16 -9,-16" fill="white"/>
+          <polygon points="0,-32 7,-13 27,-13 11,5 18,25 0,14 -18,25 -11,5 -27,-13 -7,-13" fill="#CC142B"/>
+        </g>
+        <!-- Gamma Crucis (top) -->
+        <g transform="translate(1067,130)">
+          <polygon points="0,-40 9,-16 34,-16 14,6 22,31 0,18 -22,31 -14,6 -34,-16 -9,-16" fill="white"/>
+          <polygon points="0,-32 7,-13 27,-13 11,5 18,25 0,14 -18,25 -11,5 -27,-13 -7,-13" fill="#CC142B"/>
+        </g>
+        <!-- Delta Crucis (right) -->
+        <g transform="translate(1143,317)">
+          <polygon points="0,-35 8,-14 30,-14 12,5 19,27 0,15 -19,27 -12,5 -30,-14 -8,-14" fill="white"/>
+          <polygon points="0,-28 6,-11 24,-11 10,4 15,21 0,12 -15,21 -10,4 -24,-11 -6,-11" fill="#CC142B"/>
+        </g>
       </svg>
       Made in Aotearoa
     </div>
